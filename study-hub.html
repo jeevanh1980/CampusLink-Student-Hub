@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Hub - CampusLink</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="page-styles.css"> 
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="nav-logo">
+                <a href="index.html">
+                    <i class="fas fa-graduation-cap"></i> CampusLink
+                </a>
+            </div>
+            
+            <div class="nav-auth">
+              
+                <button id="nav-login" class="btn-login">Login</button>
+                <button id="nav-signup" class="btn-signup">Sign Up</button>
+                <button id="nav-logout" class="btn-signup" style="display: none;">Logout</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-hero">
+            <h1>Study Hub</h1>
+            <p>Find peers to collaborate with and form study groups.</p>
+        </section>
+
+        <section class="page-content">
+
+            <div class="form-container">
+                <h2>Create a Study Group</h2>
+                <form id="study-group-form">
+                    <div class="form-group grid-span-2">
+                        <label for="subject">Subject:</label>
+                        <input type="text" id="subject" name="subject" placeholder="e.g., Data Structures" required>
+                    </div>
+                    <div class="form-group grid-span-2">
+                        <label for="location">Location:</label>
+                        <input type="text" id="location" name="location" placeholder="e.g., Library, 3rd Floor" required>
+                    </div>
+                    <div class="form-group grid-span-2">
+                        <label for="description">Description:</label>
+                        <textarea id="description" name="description" rows="3" placeholder="e.g., Midterm prep, all welcome"></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn grid-span-2">Create Group</button>
+                </form>
+            </div>
+
+            <div class="posts-container">
+                <h2>Current Groups</h2>
+                
+                <div class="search-section-local">
+                    <input type="text" id="search-groups" placeholder="Search by subject, location, or details...">
+                </div>
+                
+                <div id="groups-grid" class="cards">
+                    <p id="loading-message">Loading groups...</p>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 CampusLink. All rights reserved.</p>
+    </footer>
+
+    <script src="study-hub.js"></script>
+    <script src="main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudeX - CampusLink</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="page-styles.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="nav-logo">
+                <a href="index.html">
+                    <i class="fas fa-graduation-cap"></i> CampusLink
+                </a>
+            </div>
+            
+            <div class="nav-auth">
+               
+                <button id="nav-login" class="btn-login">Login</button>
+                <button id="nav-signup" class="btn-signup">Sign Up</button>
+                <button id="nav-logout" class="btn-signup" style="display: none;">Logout</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <h2>StudeX: Materials Exchange</h2>
+        <p style="text-align: center; margin-bottom: 20px;">Trade textbooks, notes, and materials.</p>
+
+        <div class="form-section active">
+            <form id="addItemForm">
+                <h3>Post an Item for Trade</h3>
+                
+                <div class="form-group grid-span-2">
+                    <label for="itemTitle">Item Title</label>
+                    <input type="text" id="itemTitle" name="title" placeholder="e.g., Intro to Algorithms Textbook" required>
+                </div>
+                
+                <div class="form-group grid-span-2">
+                    <label for="itemCourse">Author / Course (Optional)</label>
+                    <input type="text" id="itemCourse" name="author" placeholder="e.g., Cormen / CS 301">
+                </div>
+
+                 <div class="form-group grid-span-2">
+                    <label for="itemCondition">Condition / Details</label>
+                    <textarea id="itemCondition" name="description" placeholder="e.g., Like new, some highlighting." required></textarea>
+                </div>
+                  <div class="form-group grid-span-2">
+    <label for="itemContact">Contact (Email or Phone)</label>
+    <input type="text" id="itemContact" name="contact"
+           placeholder="e.g., jeevan@gmail.com or 9876543210" required>
+</div>
+
+                <div class="form-group grid-span-2">
+                    <label for="itemImage">Image (Optional)</label>
+                    <input type="file" id="itemImage" name="image" accept="image/*">
+                </div>
+                
+                
+                <div class="form-group grid-span-2">
+                    <button type="submit" class="submit-btn">Post Item</button>
+                </div>
+            </form>
+        </div>
+
+        <h3>Available Items</h3>
+        <div class="search-section-local">
+            <input type="text" id="searchItems" placeholder="Search by title, author, or course...">
+        </div>
+        <div id="itemList" class="cards">
+            </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 CampusLink. All rights reserved.</p>
+    </footer>
+
+    <div id="imageModal" class="image-modal">
+        <span class="close-modal" id="closeModal">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <script src="studex.js"></script>
+    <script src="main.js"></script>
+
+</body>
+</html>

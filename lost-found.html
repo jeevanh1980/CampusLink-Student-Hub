@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lost & Found - CampusLink</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="page-styles.css"> 
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="nav-logo">
+                <a href="index.html">
+                    <i class="fas fa-graduation-cap"></i> CampusLink
+                </a>
+            </div>
+            
+            <div class="nav-auth">
+                
+                <button id="nav-login" class="btn-login">Login</button>
+                <button id="nav-signup" class="btn-signup">Sign Up</button>
+                <button id="nav-logout" class="btn-signup" style="display: none;">Logout</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Lost & Found Portal</h2>
+        
+        <div class="tab-buttons">
+            <button id="lostTab" class="active">Lost Items</button>
+            <button id="foundTab">Found Items</button>
+        </div>
+
+        <div id="lostForm" class="form-section active">
+            <form id="addLostForm">
+                <div class="form-group">
+                    <label for="lostTitle">Item title</label>
+                    <input type="text" id="lostTitle" name="title" placeholder="e.g., Blue Water Bottle" required>
+                </div>
+                <div class="form-group">
+                    <label for="lostLocation">Location Lost</label>
+                    <input type="text" id="lostLocation" name="location" placeholder="e.g., Library, 2nd Floor" required>
+                </div>
+                <div class="form-group grid-span-2">
+                    <label for="lostDetails">Details</label>
+                    <textarea id="lostDetails" name="description" placeholder="e.g., Has a large dent" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="lostContact">Contact Info</label>
+                    <input type="text" id="lostContact" name="contact" placeholder="Your email or phone" required>
+                </div>
+                 <div class="form-group grid-span-2">
+                    <label for="lostImage">Image (Optional, e.g., a similar item)</label>
+                    <input type="file" id="lostImage" name="image" accept="image/*"> 
+                </div>
+                <div class="form-group grid-span-2">
+                    <button type="submit" class="submit-btn">Add Lost Item</button>
+                </div>
+            </form>
+        </div>
+
+        <div id="foundForm" class="form-section">
+            <form id="addFoundForm">
+                <div class="form-group">
+                    <label for="foundTitle">Item title</label>
+                    <input type="text" id="foundTitle" name="title" placeholder="e.g., Black Wallet" required>
+                </div>
+                <div class="form-group">
+                    <label for="foundLocation">Location Found</label>
+                    <input type="text" id="foundLocation" name="location" placeholder="e.g., Cafeteria" required>
+                </div>
+                <div class="form-group grid-span-2">
+                    <label for="foundDetails">Details</label>
+                    <textarea id="foundDetails" name="description" placeholder="e.g., Contains student ID for 'Suresh R.'" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="foundContact">Your Contact Info</label>
+                    <input type="text" id="foundContact" name="contact" placeholder="Your email or phone" required>
+                </div>
+                <div class="form-group grid-span-2">
+                    <label for="foundImage">Image (Highly Recommended)</label>
+                    <input type="file" id="foundImage" name="image" accept="image/*">
+                </div>
+                <div class="form-group grid-span-2">
+                    <button type="submit" class="submit-btn">Add Found Item</button>
+                </div>
+            </form>
+        </div>
+
+        <h3>Lost Items</h3>
+        <div class="search-section-local">
+            <input type="text" id="searchLostBox" placeholder="Search in 'Lost Items'...">
+        </div>
+        <div id="lostList" class="cards"></div>
+        
+        <h3>Found Items</h3>
+        <div class="search-section-local">
+            <input type="text" id="searchFoundBox" placeholder="Search in 'Found Items'...">
+        </div>
+        <div id="foundList" class="cards"></div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 CampusLink. All rights reserved.</p>
+    </footer>
+
+    <div id="imageModal" class="image-modal">
+        <span class="close-modal" id="closeModal">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <script src="lost-found.js"></script> 
+    <script src="main.js"></script>
+
+</body>
+</html>

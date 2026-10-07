@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alumni Connect - CampusLink</title>
+
+    <!-- Icon Library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="page-styles.css"> 
+    <link rel="stylesheet" href="alumni-styles.css">
+</head>
+<body>
+
+   <header>
+    <nav>
+        <div class="nav-logo">
+            <a href="index.html">
+                <i class="fas fa-graduation-cap"></i> CampusLink
+            </a>
+        </div>
+        
+        <div class="nav-auth">
+            <button id="nav-login" class="btn-login">Login</button>
+            <button id="nav-signup" class="btn-signup">Sign Up</button>
+            <button id="nav-logout" class="btn-signup" style="display: none;">Logout</button>
+        </div>
+    </nav>
+</header>
+
+    <main>
+        <div id="student-view-container" style="display: none;">
+            <!-- JavaScript will build the student view (with inbox tab) here -->
+        </div>
+
+        <div id="alumni-view-container" style="display: none;">
+            <!-- JavaScript will build the alumni view (with inbox tab) here -->
+        </div>
+
+        <div id="loading-container">
+            <h2>Loading Alumni Connect...</h2>
+            <p>Please wait.</p>
+        </div>
+
+        <div id="messaging-view-container" style="display: none;">
+            <!-- JavaScript will build the messaging view here -->
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 CampusLink. All rights reserved.</p>
+    </footer>
+
+    <script src="alumni.js"></script> 
+    <script src="main.js"></script>
+
+</body>
+</html>

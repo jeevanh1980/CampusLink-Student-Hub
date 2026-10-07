@@ -1,0 +1,345 @@
+/* page-styles.css */
+
+/* --- UPDATED: Pushes content down on sub-pages --- */
+main {
+    padding-top: 120px; /* Pushes content down below the fixed header */
+    max-width: 900px;
+    margin: 25px auto;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    
+    /* This rule takes precedence */
+    padding: 120px 20px 20px 20px; /* 120px top, 20px on other sides */
+}
+
+/* --- This is for the Study Hub hero --- */
+.page-hero {
+    text-align: center;
+    padding: 2rem;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+.page-hero h1 {
+    color: var(--heading-color);
+}
+
+.form-container, .posts-container {
+    margin-bottom: 2rem;
+}
+
+h2 {
+    text-align: center;
+    color: #003366;
+    font-size: 1.4em;
+    margin-bottom: 1.5rem; /* Added margin */
+}
+h3 {
+    color: #003366;
+    border-bottom: 2px solid #f4f4f4;
+    padding-bottom: 5px;
+    margin-top: 1rem; /* Added margin */
+    margin-bottom: 1rem; /* Added margin */
+}
+
+/* --- Tab Styles --- */
+.tab-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.tab-buttons button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    background: #e4e4e4;
+    font-size: 1em;
+    font-weight: 500;
+}
+.tab-buttons button.active {
+    background: #003366;
+    color: white;
+}
+
+/* --- Form Styles (Updated) --- */
+.form-section {
+    display: none; 
+    margin-bottom: 20px;
+}
+.form-section.active {
+    display: block; 
+}
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2-column layout */
+    gap: 16px;
+    background: #f8f9fa;
+    padding: 16px;
+    border-radius: 10px;
+}
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+.grid-span-2 {
+    grid-column: 1 / -1;
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: 500;
+    font-size: 0.9em;
+    color: #333;
+}
+
+input, textarea, select {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 0.9em;
+    width: 100%;
+    box-sizing: border-box; 
+    font-family: inherit; 
+}
+
+/* --- THIS IS THE FIX (PART 1) --- */
+/* The "width: 100%" rule has been REMOVED from this block */
+button.submit-btn {
+    background: #003366;
+    color: white;
+    border: none;
+    padding: 12px; 
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 500;
+    /* width: 100%;  <-- This line is gone! */
+}
+button.submit-btn:hover {
+    background: #002244;
+}
+
+/* --- THIS IS THE FIX (PART 2) --- */
+/* This new rule adds the 100% width back to all OTHER forms */
+#addLostForm .submit-btn,
+#addFoundForm .submit-btn,
+#study-group-form .submit-btn,
+#addItemForm .submit-btn,
+#login-form .submit-btn,
+#register-form .submit-btn,
+#profile-form .submit-btn,
+#job-post-form .submit-btn,
+#reply-form .submit-btn {
+    width: 100%;
+}
+/* The "resume-upload-form" is NOT in this list, so it will be auto-width. */
+
+
+/* --- Card Styles --- */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px;
+}
+.card {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 12px;
+    font-size: 0.9em;
+    position: relative;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+.card h3 {
+    color: #003366;
+    margin: 0 0 5px 0;
+    font-size: 1.1em;
+    border: none; 
+}
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    cursor: pointer;
+}
+.card p {
+    margin: 4px 0;
+}
+.card button.btn-claim {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    border: none;
+    background: #d9534f;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.85em;
+}
+.card button.btn-claim:hover {
+    background: #c9302c;
+}
+
+/* --- Search Styles --- */
+.search-section-local {
+    margin-bottom: 15px;
+}
+.search-section-local input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+/* --- Modal Styles --- */
+.image-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    padding-top: 50px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.9);
+}
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    max-height: 90vh;
+}
+.close-modal {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* --- Study Hub Comments --- */
+.comments-section {
+    border-top: 2px solid #f0f0f0;
+    margin-top: 15px;
+    padding-top: 10px;
+}
+.comments-section h4 {
+    color: #555;
+    font-size: 0.95em;
+    margin-bottom: 10px;
+}
+.comments-list {
+    max-height: 200px;
+    overflow-y: auto;
+    background-color: #f9f9f9;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    min-height: 40px; 
+}
+.comment-item {
+    font-size: 0.9em;
+    margin-bottom: 8px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #eee;
+    line-height: 1.4;
+    word-wrap: break-word; 
+}
+.comment-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+.comment-item strong {
+    color: var(--primary-color, #003366); 
+}
+.comment-form {
+    display: flex;
+    gap: 8px;
+}
+.comment-form input {
+    flex-grow: 1; 
+    padding: 8px;
+    font-size: 0.9em;
+}
+.comment-form button {
+    padding: 8px 12px;
+    background-color: var(--primary-color, #003366);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+}
+.comment-form button:hover {
+    background-color: var(--primary-color-dark, #002244);
+}
+.btn-group-delete {
+    background-color: #dc3545; /* Red */
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+    margin-top: 10px; 
+    transition: background-color 0.2s ease;
+}
+.btn-group-delete:hover {
+    background-color: #c82333; /* Darker red */
+}
+.interest-section {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 2px solid #f0f0f0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.interest-count {
+    font-size: 0.95em;
+    font-weight: 500;
+}
+.btn-interest {
+    background-color: #28a745; /* Green */
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+}
+.btn-interest:hover {
+    background-color: #218838; /* Darker green */
+}
+.btn-interest:disabled {
+    background-color: #aaa;
+    cursor: not-allowed;
+}
+.btn-not-interested {
+    background-color: #6c757d; /* Grey */
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+}
+.btn-not-interested:hover {
+    background-color: #5a6268;
+}

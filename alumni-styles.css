@@ -1,0 +1,171 @@
+/* alumni-styles.css */
+
+/* --- Tab Styles --- */
+.tab-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.tab-buttons button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    background: #e4e4e4;
+    font-size: 1em;
+    font-weight: 500;
+}
+.tab-buttons button.active {
+    background: #003366;
+    color: white;
+}
+
+/* --- Tab Content Styling --- */
+.tab-content {
+    display: none; /* Hide all content by default */
+}
+.tab-content.active {
+    display: block; /* Show only the active one */
+}
+
+/* --- Search/Filter Bar --- */
+.filter-bar {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+.filter-group {
+    display: flex;
+    flex-direction: column;
+}
+.filter-group label {
+    font-weight: 500;
+    font-size: 0.9em;
+    margin-bottom: 5px;
+}
+.filter-group input,
+.filter-group select {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 0.9em;
+}
+
+/* --- Profile & Job Card Styles --- */
+.profile-card, .job-card {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+.profile-card h3, .job-card h3 {
+    color: #003366;
+    margin: 0 0 10px 0;
+    border: none;
+}
+.profile-card p, .job-card p {
+    margin: 4px 0;
+    font-size: 0.95em;
+}
+.profile-card .job-title {
+    font-weight: bold;
+    color: #333;
+}
+.profile-card .help-tags {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+.profile-card .help-tags span {
+    background: #e0e0e0;
+    padding: 4px 10px;
+    border-radius: 15px;
+    font-size: 0.85em;
+    font-weight: 500;
+}
+.btn-contact, .btn-send-message {
+    display: inline-block;
+    background: #003366;
+    color: white;
+    padding: 8px 12px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-size: 0.9em;
+    border: none;
+    cursor: pointer;
+}
+.btn-contact:hover, .btn-send-message:hover {
+    background: #002244;
+}
+.btn-send-message {
+    background-color: #6c757d;
+}
+.btn-send-message:hover {
+    background-color: #5a6268;
+}
+
+
+/* --- ALUMNI VIEW STYLES --- */
+.alumni-dashboard {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+.dashboard-section {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.dashboard-section h2 {
+    color: #003366;
+    border-bottom: 2px solid #f4f4f4;
+    padding-bottom: 10px;
+}
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+}
+.checkbox-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.checkbox-item input {
+    width: auto;
+}
+.my-postings-list .card {
+    position: relative;
+}
+.btn-delete-posting {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #dc3545;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.btn-delete-posting:hover {
+    background: #c82333;
+}
+
+/* --- THIS IS THE FIX --- */
+/* This rule will force the button to be auto-width */
+#content-account #resume-upload-form .submit-btn {
+    width: auto !important; /* Resets the button width */
+    padding-left: 2rem !important;  /* Adds some horizontal padding */
+    padding-right: 2rem !important; /* Adds some horizontal padding */
+}

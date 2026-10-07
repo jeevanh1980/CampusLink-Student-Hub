@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CampusLink - Student Hub</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+    <nav>
+        <div class="nav-logo">
+            <a href="index.html">
+                <i class="fas fa-graduation-cap"></i> CampusLink
+            </a>
+        </div>
+        
+        <div class="nav-auth">
+            <button id="nav-login" class="btn-login">Login</button>
+            <button id="nav-signup" class="btn-signup">Sign Up</button>
+            <button id="nav-logout" class="btn-signup" style="display: none;">Logout</button>
+        </div>
+    </nav>
+</header>
+
+    <div class="hero-wrapper">
+        <section class="hero-content">
+            <h1>Welcome to CampusLink</h1>
+            <p>Your one-stop hub for student community and collaboration.</p>
+        </section>
+    </div>
+
+    <main>
+        <section class="features">
+            <div class="feature-grid">
+
+                <div class="feature-card" id="card-lost-found">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRg5slBMtC8BeArISTRUdj5WXOqxpMdQSfmBspWeW9ylJbvoYNWJ1h9euve7Pj0ZmVGZIE&usqp=CAU" alt="Lost and Found">
+                    <div class="card-content">
+                        <h3>Lost & Found</h3>
+                        <p>Quickly report items you've lost or found on campus. Help others and get your belongings back.</p>
+                        <a href="lost-found.html" class="btn-secondary">Go to Lost & Found</a>
+                    </div>
+                </div>
+
+                <div class="feature-card" id="card-study-hub">
+                    <img src="https://media.istockphoto.com/id/1347747136/vector/group-of-students-studying.jpg?s=612x612&w=0&k=20&c=t8UwXDXTCu2O-2mOLE8_aQ7KTXxjuUk_WgiR0cS6pSk=" alt="Study Hub">
+                    <div class="card-content">
+                        <h3>Study Hub</h3>
+                        <p>Form study groups for exams, subjects, or projects. Find peers to collaborate and succeed with.</p>
+                        <a href="study-hub.html" class="btn-secondary">Find a Study Group</a>
+                    </div>
+                </div>
+
+                <div class="feature-card" id="card-studex">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRJ8Uv75b3rpng_5wXSdB-2kz66MQfnOZ4OndLHcXEpRpLQbgpoqqY9Rp3hyGHaqenaVM&usqp=CAU" alt="StudeX">
+                    <div class="card-content">
+                        <h3>StudeX</h3>
+                        <p>A simple marketplace to trade used textbooks, notes, and other academic materials with fellow students.</p>
+                        <a href="studex.html" class="btn-secondary">Browse Materials</a>
+                    </div>
+                </div>
+
+                <div class="feature-card" id="card-alumni-connect">
+    <img src="https://alumniconnect.co.ke/static/media/BLACK_AND_PURPLE_01.a0dacc9a.png" alt="Alumni Connect">
+    <div class="card-content" id="alumni-card-content">
+        <h3 id="alumni-card-title">Alumni Connect</h3>
+        <p id="alumni-card-description">
+            Network with experienced alumni. Get career advice, mentorship, and explore internship opportunities.
+        </p>
+        <a id="alumni-card-button" href="alumni.html" class="btn-secondary">Connect with Alumni</a>
+    </div>
+</div>
+
+
+            </div>
+        </section>
+        
+    </main>
+    <footer>
+        <p>&copy; 2025 CampusLink. All rights reserved.</p>
+    </footer>
+
+    <script src="main.js"></script>
+    <script>
+const role = localStorage.getItem('role');
+
+if (role === 'alumni') {
+    document.getElementById("alumni-card-title").textContent = "My Alumni Dashboard";
+    document.getElementById("alumni-card-description").textContent =
+        "Manage your mentor profile, post internship opportunities, and respond to student messages.";
+    document.getElementById("alumni-card-button").textContent = "Go to Dashboard";
+    document.getElementById("alumni-card-button").href = "alumni.html";
+}
+</script>
+
+
+</body>
+</html>
